@@ -1,0 +1,240 @@
+
+    <html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+        <link
+            rel="stylesheet"
+            as="style"
+            onload="this.rel='stylesheet'"
+            href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+        />
+
+        <title>Risk Assessment Results</title>
+        <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <style>
+            /* Ensure the body uses your specified fonts, even within the iframe */
+            body { font-family: "Public Sans", "Noto Sans", sans-serif; margin: 0; padding: 0; }
+            /* Ensure full height for the layout container within the iframe */
+            .relative.flex.size-full.min-h-screen.flex-col { min-height: 100vh; }
+
+            /* Adjustments for width and padding within the embedded HTML */
+            .flex.flex-1.justify-center.py-5 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .layout-content-container.flex.flex-col.flex-1 {
+                max-width: 100% !important;
+                width: 100% !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            header.px-10.py-3 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .table-17770407-8c71-4535-bfd5-5b2c82310fed-column-120,
+            .table-17770407-8c71-4535-bfd5-5b2c82310fed-column-240 {
+                width: auto !important;
+            }
+            table {
+                width: 100%;
+                table-layout: fixed;
+            }
+        </style>
+    </head>
+    <body>
+        <div
+            class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+            style='--checkbox-tick-svg: url(&apos;data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e&apos;); font-family: "Public Sans", "Noto Sans", sans-serif;'
+        >
+            <div class="layout-container flex h-full grow flex-col">
+                <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f2f4] px-10 py-3">
+                    <div class="flex items-center gap-4 text-[#121516]">
+                        <div class="size-4">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-[#121516] text-lg font-bold leading-tight tracking-[-0.015em]">StrokeRisk</h2>
+                    </div>
+                    <div class="flex items-center justify-end gap-6 flex-wrap flex-1">
+                        <a class="text-[#121516] text-sm font-medium leading-normal" href="pages/01_Home.py">Home</a>
+                        <a class="text-[#121516] text-sm font-medium leading-normal" href="pages/07_About_Us.py">About Us</a>
+                        <a class="text-[#121516] text-sm font-medium leading-normal" href="pages/05_Patient_Records.py">Manage Patient Records</a>
+                        
+                        <a href="pages/08_Practitioners_Profile.py" class="flex size-10 items-center justify-center rounded-full overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwkktHQpR_bDtX78dae6gQMFY5NXBfpOazltOY9n2KDjANnnbfMSvj1VWr6h9sdxif9ERNDC4qiRzYq3h5DAPM8-R7pLtxTDUn1yabMKiR-M9aKohcwYezZ-0kO1omt02RpBEHBmpq9JeThPsCa8WcsleL1TSS668g3P_dtzNLUOWlc2lRl_IzpdsrsvTBBl7ypv9s3rjUgLBazzzNUdhIp345xspze6IOTt0Cntw09qi6KJ913o7nc9nSNJdeuqd8gyzf5dsfw1k" alt="Practitioner Profile" class="w-full h-full object-cover">
+                        </a>
+
+                        <a href="pages/13_Logout.py" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#3f8abf] text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                                <span class="truncate">Log Out</span>
+                        </a>
+                    </div>
+                </header>
+                <div class="flex flex-1 justify-center py-5 px-4">
+                    <div class="layout-content-container flex flex-col flex-1">
+                        <div class="flex flex-wrap justify-between gap-3 p-4">
+                            <p class="text-[#121516] tracking-light text-[32px] font-bold leading-tight min-w-72">Risk Assessment Results</p>
+                        </div>
+                        
+                        <!-- Data Privacy Consent Section -->
+                        <div class="px-4 py-3">
+                            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1">
+                                Before proceeding, please acknowledge your understanding and consent regarding the use of patient data for risk assessment and the display of detailed results.
+                            </p>
+                            <label class="flex gap-x-3 py-3 flex-row items-center">
+                                <input
+                                    type="checkbox"
+                                    id="data-consent-checkbox"
+                                    class="h-5 w-5 rounded border-[#dde1e3] border-2 bg-transparent text-[#3f8abf] checked:bg-[#3f8abf] checked:border-[#3f8abf] checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-[#dde1e3] focus:outline-none"
+                                />
+                                <span class="text-[#121516] text-base font-normal leading-normal">
+                                    I understand and consent to the use of this data for stroke risk assessment and viewing detailed results.
+                                </span>
+                            </label>
+                        </div>
+
+                        <!-- Conditional Content (initially hidden) -->
+                        <div id="conditional-content" style="display: none;">
+                            <div class="flex flex-wrap gap-4 p-4">
+                                <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-[#f1f2f4]">
+                                    <p class="text-[#121516] text-base font-medium leading-normal">Predicted Stroke Risk</p>
+                                    <p class="text-[#121516] tracking-light text-2xl font-bold leading-tight"><!--PERCENT_PLACEHOLDER--></p>
+                                </div>
+                                <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-[#f1f2f4]">
+                                    <p class="text-[#121516] text-base font-medium leading-normal">Risk Level</p>
+                                    <p class="text-[#121516] tracking-light text-2xl font-bold leading-tight"><!--LEVEL_PLACEHOLDER--></p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3 p-4">
+                                <div class="flex gap-6 justify-between">
+                                    <p class="text-[#121516] text-base font-medium leading-normal">Stroke Risk</p>
+                                    <p class="text-[#121516] text-sm font-normal leading-normal"><!--BAR_PLACEHOLDER--></p>
+                                </div>
+                                <div class="rounded bg-[#dde1e3]"><div class="h-2 rounded bg-[#121516]" style="width: 12%;"></div></div>
+                            </div>
+                            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Key Factors</h2>
+                            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
+                                The following factors have been identified as the most influential in determining your stroke risk. Understanding these factors can help you and your healthcare
+                                provider make informed decisions about your health.
+                            </p>
+                            <div class="px-4 py-3 @container">
+                                <div class="flex overflow-hidden rounded-xl border border-[#dde1e3] bg-white">
+                                    <table class="flex-1">
+                                        <thead>
+                                            <tr class="bg-white">
+                                                <th class="table-17770407-8c71-4535-bfd5-5b2c82310fed-column-120 px-4 py-3 text-left text-[#121516] w-[400px] text-sm font-medium leading-normal">Factor</th>
+                                                <th class="table-17770407-8c71-4535-bfd5-5b2c82310fed-column-240 px-4 py-3 text-left text-[#121516] w-[400px] text-sm font-medium leading-normal">
+                                                    Influence
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-t border-t-[#dde1e3]">
+                                                <td class="table-17770407-8c71-4535-bfd5-5b2c82310fed-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121516] text-sm font-normal leading-normal">Age</td>
+                                                <td class="table-17770407-8c71-4535-bfd5-5b2c82310fed-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7781] text-sm font-normal leading-normal">High</td>
+                                            </tr>
+                                            <tr class="border-t border-t-[#dde1e3]">
+                                                <td class="table-17770407-8c71-4535-bfd5-5b2c82310fed-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121516] text-sm font-normal leading-normal">
+                                                    Blood Pressure
+                                                </td>
+                                                <td class="table-17770407-8c71-4535-bfd5-5b2c82310fed-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7781] text-sm font-normal leading-normal">Moderate</td>
+                                            </tr>
+                                            <tr class="border-t border-t-[#dde1e3]">
+                                                <td class="table-17770407-8c71-4535-bfd5-5b2c82310fed-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121516] text-sm font-normal leading-normal">
+                                                    Cholesterol Level
+                                                </td>
+                                                <td class="table-17770407-8c71-4535-bfd5-5b2c82310fed-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7781] text-sm font-normal leading-normal">Low</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <style>
+                                    @container(max-width:120px){.table-17770407-8c71-4535-bfd5-5b2c82310fed-column-120{display: none;}}
+                                    @container(max-width:240px){.table-17770407-8c71-4535-bfd5-5b2c82310fed-column-240{display: none;}}
+                                </style>
+                            </div>
+                            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Recommendations</h2>
+                            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">Based on your risk assessment, we recommend the following actions:</p>
+                            <div class="px-4">
+                                <label class="flex gap-x-3 py-3 flex-row">
+                                    <input
+                                        type="checkbox"
+                                        class="h-5 w-5 rounded border-[#dde1e3] border-2 bg-transparent text-[#3f8abf] checked:bg-[#3f8abf] checked:border-[#3f8abf] checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-[#dde1e3] focus:outline-none"
+                                    />
+                                    <p class="text-[#121516] text-base font-normal leading-normal">
+                                        Schedule a follow-up appointment with your healthcare provider to discuss these results in detail.
+                                    </p>
+                                </label>
+                                <label class="flex gap-x-3 py-3 flex-row">
+                                    <input
+                                        type="checkbox"
+                                        class="h-5 w-5 rounded border-[#dde1e3] border-2 bg-transparent text-[#3f8abf] checked:bg-[#3f8abf] checked:border-[#3f8abf] checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-[#dde1e3] focus:outline-none"
+                                    />
+                                    <p class="text-[#121516] text-base font-normal leading-normal">Consider lifestyle modifications such as regular exercise and a balanced diet.</p>
+                                </label>
+                                <label class="flex gap-x-3 py-3 flex-row">
+                                    <input
+                                        type="checkbox"
+                                        class="h-5 w-5 rounded border-[#dde1e3] border-2 bg-transparent text-[#3f8abf] checked:bg-[#3f8abf] checked:border-[#3f8abf] checked:bg-[image:--checkbox-tick-svg] focus:ring-0 focus:ring-offset-0 focus:border-[#dde1e3] focus:outline-none"
+                                    />
+                                    <p class="text-[#121516] text-base font-normal leading-normal">Monitor your blood pressure and cholesterol levels regularly.</p>
+                                </label>
+                            </div>
+                            <div class="flex px-4 py-3 justify-end">
+                                <a href="pages/09_Patient_Profile.py"
+                                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#3f8abf] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                                >
+                                    <span class="truncate">View Patient Full Profile</span>
+                                </a>
+                            </div>
+                            <p class="text-[#6a7781] text-sm font-normal leading-normal pb-3 pt-1 px-4">
+                                <a href="pages/13_Data_Privacy_Consent.py" class="underline">For more information about the model's performance and fairness metrics, click here.</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <footer class="flex justify-center">
+                    <div class="flex flex-1 flex-col">
+                        <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+                            <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                                <a class="text-[#6a7781] text-base font-normal leading-normal min-w-40" href="pages/04_Model_Performance.py">Model Performance</a>
+                                <a class="text-[#6a7781] text-base font-normal leading-normal min-w-40" href="pages/10_System_setting.py">System Settings</a>
+                                <a class="text-[#6a7781] text-base font-normal leading-normal min-w-40" href="pages/12_Help_and_Support.py">Help & Support</a>
+                                <a class="text-[#6a7781] text-base font-normal leading-normal min-w-40" href="pages/13_Logout.py">Log Out</a>
+                            </div>
+                            <p class="text-[#6a7781] text-base font-normal leading-normal">© 2025 G4 Pulse. All rights reserved.</p>
+                        </footer>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const consentCheckbox = document.getElementById('data-consent-checkbox');
+                const conditionalContent = document.getElementById('conditional-content');
+
+                // Function to toggle visibility
+                function toggleContentVisibility() {
+                    if (consentCheckbox.checked) {
+                        conditionalContent.style.display = 'block';
+                    } else {
+                        conditionalContent.style.display = 'none';
+                    }
+                }
+
+                // Initial check on load
+                toggleContentVisibility();
+
+                // Add event listener for changes
+                consentCheckbox.addEventListener('change', toggleContentVisibility);
+            });
+        </script>
+    </body>
+    </html>
+    

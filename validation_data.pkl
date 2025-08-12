@@ -1,0 +1,35 @@
+# train_models.py
+import joblib
+import pandas as pd
+from sklearn.ensemble import (RandomForestClassifier, 
+                            ExtraTreesClassifier)
+from xgboost import XGBClassifier
+from sklearn.model_selection import train_test_split
+
+# Load data
+df = pd.read_csv('stroke_data_smoted_scaled_for_pycaret.csv')
+X = df.drop('stroke', axis=1)
+y = df['stroke']
+
+# Train/Test split
+X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create models directory if it doesn't exist
+import os
+os.makedirs('models', exist_ok=True)
+
+# Train and save models
+models = {
+    'Random Forest': RandomForestClassifier().fit(X_train, y_train),
+    'XGBoost': XGBClassifier().fit(X_train, y_train),
+    'Extra Trees': ExtraTreesClassifier().fit(X_train, y_train)
+}
+
+# Save models
+for name, model in models.items():
+    joblib.dump(model, f'models/strokerisk_model_{name.lower().replace(" ", "_")}.pkl')
+
+# Save validation data
+joblib.dump({'X': X_val, 'y': y_val}, 'models/validation_data.pkl')
+
+print("All models and validation data saved successfully!")

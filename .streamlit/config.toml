@@ -1,0 +1,36 @@
+# .streamlit/config.toml
+
+[theme]
+# Primary color: A vibrant, professional blue for interactive elements.
+# This should make buttons, links, and active states stand out more.
+primaryColor="#007bff" # A standard, clean blue often used in professional UIs
+
+# Background color: Keeping a clean white for the main content area for maximum readability.
+backgroundColor="#FFFFFF"
+
+# Secondary background color: A very light, subtle blue-grey to clearly distinguish
+# the sidebar and input fields, giving a fresh, modern medical feel.
+secondaryBackgroundColor="#EBF4F8" # A very light, cool blue-grey
+
+# Text color: A dark, almost black, for excellent contrast and readability.
+textColor="#212529" # A slightly softer dark grey than pure black
+
+# Font family: Sticking with sans-serif for modern, clean readability.
+font="sans serif"
+
+[browser]
+# Sidebar width: Maintaining a slightly wider sidebar for better navigation readability.
+sidebarWidth = "250px"
+
+# Toolbar mode: Keeping it minimal for a cleaner, branded look.
+toolbarMode = "minimal"
+
+[global]
+# General Streamlit settings for a cleaner console and app behavior.
+disableWatchdogWarning = true
+showWarningOnDirectExecution = false
+dataFrameSerialization = "arrow"
+suppressDeprecationWarnings = false
+maxCachedMessageSize = 100
+minCachedMessageSize = 10
+maxCachedMessageAge = 3600
