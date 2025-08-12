@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+#<<<<<<< HEAD
 # streamlit 
 # pandas 
 # numpy 
@@ -7,8 +7,7 @@
 # joblib 
 # matplotlib 
 # seaborn 
-=======
->>>>>>> 4d65b9b3f1f1bbcce67523aea789f8f73cc32ce8
+#d65b9b3f1f1bbcce67523aea789f8f73cc32ce8
 # streamlit==1.48.0
 # pandas==2.3.1
 # numpy==2.3.2
