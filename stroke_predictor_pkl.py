@@ -40,7 +40,8 @@ except Exception:
 # File locations (override via env if needed)
 # ------------------------------
 CURRENT_DIR = Path(__file__).parent
-DEFAULT_MODEL_NAME = "strokerisk_tune_ensemble_model.pkl"
+# DEFAULT_MODEL_NAME = "strokerisk_tune_ensemble_model.pkl"
+DEFAULT_MODEL_NAME = "strokerisk_model_rf.pkl"
 MODEL_FILE = Path(os.getenv("MODEL_FILE", CURRENT_DIR / DEFAULT_MODEL_NAME))
 DATA_SAMPLE_PATH = CURRENT_DIR / "data" / "sample_data.csv"
 
